@@ -36,7 +36,7 @@ const DOM = {
 async function loadData() {
   renderSkeletons(8);
   try {
-    const res = await fetch('./data.json');
+    const res = await fetch('https://raw.githubusercontent.com/prince-chaudhari/visual-showcase/refs/heads/main/data.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     state.items = data;
