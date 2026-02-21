@@ -1,1 +1,98 @@
-
+[
+  {
+    "id": 1,
+    "name": "Aether Chair",
+    "category": "Furniture",
+    "subDescription": "Weightless comfort meets sculptural form.",
+    "description": "The Aether Chair redefines the boundaries between functional furniture and art. Crafted from sustainably sourced ash wood and wrapped in hand-stitched saddle leather, every curve has been refined over 200 prototypes. The floating seat design distributes weight evenly, eliminating pressure points during extended use. Its joinery is entirely mortise-and-tenon — no hardware, no adhesives — just precision woodworking that will last generations. Available in three leather finishes: natural tan, espresso, and slate.",
+    "images": [
+      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+      "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&q=80"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Solaris Lamp",
+    "category": "Lighting",
+    "subDescription": "Light sculpted into geometry.",
+    "description": "The Solaris Lamp draws inspiration from celestial bodies — specifically the corona of the sun during an eclipse. Its hand-blown borosilicate glass diffuser traps light inside a perfect sphere, casting soft, even illumination with zero glare. The stem is solid brass, aged naturally to develop a rich patina over time. Dimmable from 1% to 100%, it supports any mood from candlelit intimacy to bright task lighting. The integrated touch sensor on the base responds to both tap and hold gestures. A design that will anchor any room it inhabits.",
+    "images": [
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80",
+      "https://images.unsplash.com/photo-1513506003901-1e6a35082bf6?w=800&q=80",
+      "https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&q=80"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Obsidian Vessel",
+    "category": "Ceramics",
+    "subDescription": "Thrown on the wheel. Fired in darkness.",
+    "description": "Each Obsidian Vessel is a singular object — thrown by hand on a kick wheel and fired in a reduction kiln where the flame itself paints the surface. The glossy black exterior conceals flashes of iridescent cobalt and forest green that only reveal themselves under direct light. The interior is left raw, textured clay that grounds the piece in its origins. No two pieces share the same glaze pattern, making every vessel a one-of-one artwork. Proportioned to hold a single large branch or a clutch of pampas grass — objects that need room to breathe.",
+    "images": [
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
+      "https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1605883705077-8d3d3cebe78c?w=800&q=80"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Meridian Shelf",
+    "category": "Furniture",
+    "subDescription": "Where books live like architecture.",
+    "description": "The Meridian Shelf challenges the notion that storage must be invisible. Each unit is constructed from 40mm thick solid walnut slabs, edge-jointed and sanded to a matte oil finish that reveals the full depth of the grain. The floating bracket system uses concealed steel rails anchored into studs, creating the illusion that shelves hover away from the wall. Available in configurations from single to five-tier, each tier is capable of holding 80kg evenly distributed. Ideal for serious book collections, audio equipment, or curated object displays. Ships flat in custom-cut foam packaging.",
+    "images": [
+      "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=800&q=80",
+      "https://images.unsplash.com/photo-1532372576444-dda954194ad0?w=800&q=80",
+      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Fog Carafe",
+    "category": "Tableware",
+    "subDescription": "Misted glass. Pure ritual.",
+    "description": "The Fog Carafe begins with a single cylinder of mouth-blown lead-free crystal, then passes through a sandblasting process that creates its signature matte exterior. The contrast between the frosted outside and the polished interior lip creates a subtle optical effect — liquid inside appears to glow. The stopper is hand-turned from bleached maple, fitting with a satisfying tactile resistance. Holds 1.2 litres. Perfect for water, wine, or the slow ceremony of morning juice. Dishwasher safe on the top rack. A quiet, beautiful object that elevates every table it touches.",
+    "images": [
+      "https://images.unsplash.com/photo-1559181567-c3190100191e?w=800&q=80",
+      "https://images.unsplash.com/photo-1578898887932-dce23a595ad4?w=800&q=80",
+      "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800&q=80"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Ember Candle",
+    "category": "Tableware",
+    "subDescription": "Slow burn. Deep scent.",
+    "description": "Ember is a single-wick candle poured into a hand-thrown ceramic vessel that doubles as a planter or catch-all once the wax is spent. The wax blend is 100% coconut-apricot, known for its exceptionally clean burn and superior scent throw. The fragrance — developed with a Grasse perfumer — layers smoked cedarwood, raw amber, and a breath of cardamom that deepens as the candle burns down. Burn time is 65–80 hours depending on wick trimming. The vessel itself features a matte sand glaze with a terracotta interior. An object worth keeping long after the flame is gone.",
+    "images": [
+      "https://images.unsplash.com/photo-1602178506098-5df4b2b8cf0b?w=800&q=80",
+      "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800&q=80",
+      "https://images.unsplash.com/photo-1608181831718-c9e19b7cb860?w=800&q=80"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Nimbus Pendant",
+    "category": "Lighting",
+    "subDescription": "Concrete and copper. Heavy and warm.",
+    "description": "The Nimbus Pendant subverts expectations — its shell is cast from ultra-high-performance concrete tinted with iron oxide pigment, yet it hangs as lightly as a paper lantern thanks to hollow-core construction. The interior is lined with copper leaf applied by hand, turning every photon into warm amber light. The pendant uses a standard E27 socket and pairs perfectly with a vintage-style carbon filament bulb. The canopy is raw brass, left uncoated to age and patinate naturally. Cord length is fully adjustable from 30 to 150cm at installation. A centrepiece that starts conversations.",
+    "images": [
+      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=800&q=80",
+      "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=800&q=80",
+      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&q=80"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Stoneware Bowl",
+    "category": "Ceramics",
+    "subDescription": "Made for the table. Built for time.",
+    "description": "This stoneware bowl is the result of a two-year collaboration between a ceramic engineer and a Michelin-starred chef who wanted functional objects worthy of the meals they accompany. The form is wide and low — designed to showcase food rather than contain it. The glaze is a split-fire ash glaze: matte on the exterior walls, gloss-pooled in the interior well. Food-safe, dishwasher-safe, and oven-safe to 280°C. The clay body is high-iron stoneware sourced from a single deposit in the Black Forest, giving it a distinctive warm grey tone with flecks of darker mineral inclusions. Sold individually — every piece is unique.",
+    "images": [
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80",
+      "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=800&q=80"
+    ]
+  }
+]
