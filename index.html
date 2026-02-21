@@ -3,387 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moments in Light — Curated Photography Gallery</title>
-  <meta name="description" content="A curated collection of breathtaking landscape photography capturing nature's most serene moments." />
+  <meta name="description" content="A curated collection of considered objects — furniture, lighting, ceramics, and tableware." />
+  <title>Atelier — Curated Objects</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    /* ===== Reset & Base ===== */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --bg: hsl(40, 20%, 97%);
-      --fg: hsl(220, 20%, 14%);
-      --card: hsl(0, 0%, 100%);
-      --muted: hsl(220, 10%, 46%);
-      --accent: hsl(28, 60%, 58%);
-      --accent-light: hsl(28, 60%, 58%, 0.1);
-      --border: hsl(35, 20%, 88%);
-      --secondary-bg: hsl(35, 30%, 93%, 0.4);
-      --shadow-card: 0 4px 24px -4px hsl(220, 20%, 14%, 0.06);
-      --shadow-hover: 0 12px 32px -8px hsl(220, 20%, 14%, 0.12);
-      --radius: 0.75rem;
-      --font-display: 'DM Serif Display', serif;
-      --font-body: 'DM Sans', sans-serif;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background-color: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    /* ===== Hero ===== */
-    .hero {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 5rem 1.5rem 4rem;
-      text-align: center;
-    }
-
-    .hero__label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-
-    .hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(2.25rem, 6vw, 3.5rem);
-      font-weight: 400;
-      color: var(--fg);
-      line-height: 1.15;
-    }
-
-    .hero__subtitle {
-      margin-top: 1rem;
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 420px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.7;
-    }
-
-    .hero__divider {
-      width: 3rem;
-      height: 1px;
-      background: var(--accent);
-      margin: 1.5rem auto 0;
-      border: none;
-    }
-
-    /* ===== Gallery ===== */
-    .gallery {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 1.5rem 5rem;
-    }
-
-    .gallery__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .card__image {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      object-fit: cover;
-    }
-
-    .card__body {
-      padding: 1rem;
-    }
-
-    .card__title {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      color: var(--fg);
-      margin-bottom: 0.25rem;
-    }
-
-    .card__desc {
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    /* ===== Contact ===== */
-    .contact {
-      border-top: 1px solid var(--border);
-      background: var(--secondary-bg);
-    }
-
-    .contact__inner {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem 4.5rem;
-    }
-
-    .contact__header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .contact__label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .contact__title {
-      font-family: var(--font-display);
-      font-size: clamp(1.5rem, 4vw, 1.875rem);
-      font-weight: 400;
-      color: var(--fg);
-    }
-
-    .contact__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-
-    .contact-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0.75rem;
-      padding: 1.25rem;
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-card);
-    }
-
-    .contact-card__icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      background: var(--accent-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .contact-card__icon svg {
-      width: 1rem;
-      height: 1rem;
-      stroke: var(--accent);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .contact-card__heading {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.1rem;
-    }
-
-    .contact-card__text {
-      font-size: 0.875rem;
-      color: var(--fg);
-      line-height: 1.6;
-      white-space: pre-line;
-    }
-
-    /* ===== Footer ===== */
-    .footer {
-      border-top: 1px solid var(--border);
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .footer__text {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
-    /* ===== Responsive ===== */
-    @media (min-width: 640px) {
-      .gallery__grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .contact__grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .gallery__grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .contact__grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-      .hero {
-        padding-top: 7rem;
-        padding-bottom: 5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Hero -->
-  <header class="hero">
-    <p class="hero__label">Curated Collection</p>
-    <h1 class="hero__title">Moments in Light</h1>
-    <p class="hero__subtitle">A journey through nature's most breathtaking landscapes, captured in stillness.</p>
-    <hr class="hero__divider" />
+  <!-- ══ Hero ══════════════════════════════════════════════════ -->
+  <header role="banner">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">
+            <span aria-hidden="true"></span>
+            Curated Collection
+          </p>
+          <h1 id="hero-heading">
+            Objects made<br />
+            to <em>endure</em>
+          </h1>
+          <p class="hero-sub">
+            A considered edit of furniture, lighting, ceramics, and tableware —
+            each piece chosen for its craft, material integrity, and quiet presence.
+          </p>
+        </div>
+      </div>
+      <div class="hero-count" id="hero-count" aria-hidden="true">00</div>
+    </section>
   </header>
 
-  <!-- Gallery -->
-  <main class="gallery" aria-label="Image gallery">
-    <div class="gallery__grid">
+  <!-- ══ Main ══════════════════════════════════════════════════ -->
+  <main id="main-content">
+    <div class="container">
 
-      <article class="card">
-        <img class="card__image" src="gallery-1.jpg" alt="Aerial view of turquoise ocean waves meeting white sand beach" loading="lazy" />
-        <div class="card__body">
-          <h2 class="card__title">Azure Shore</h2>
-          <p class="card__desc">Turquoise waters meet white sand in perfect harmony.</p>
-        </div>
-      </article>
+      <!-- Filter Bar -->
+      <nav class="filter-bar" aria-label="Filter by category">
+        <ul
+          id="filter-list"
+          class="filter-list"
+          role="tablist"
+          aria-label="Product categories"
+        >
+          <!-- Populated by JS -->
+        </ul>
+      </nav>
 
-      <article class="card">
-        <img class="card__image" src="gallery-2.jpg" alt="Modern minimalist building with clean geometric lines at golden hour" loading="lazy" />
-        <div class="card__body">
-          <h2 class="card__title">Golden Geometry</h2>
-          <p class="card__desc">Clean architectural lines bathed in warm golden light.</p>
+      <!-- Product Grid -->
+      <section aria-label="Product grid" aria-live="polite">
+        <div id="grid" class="grid">
+          <!-- Populated by JS -->
         </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="gallery-3.jpg" alt="Dense tropical forest canopy with morning mist" loading="lazy" />
-        <div class="card__body">
-          <h2 class="card__title">Emerald Canopy</h2>
-          <p class="card__desc">Morning mist rising through a dense tropical forest.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="gallery-4.jpg" alt="Warm sunset over desert sand dunes" loading="lazy" />
-        <div class="card__body">
-          <h2 class="card__title">Desert Glow</h2>
-          <p class="card__desc">Endless dunes painted by the warmth of a setting sun.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="gallery-5.jpg" alt="Snow-capped mountain peaks reflected in a calm alpine lake" loading="lazy" />
-        <div class="card__body">
-          <h2 class="card__title">Still Mirror</h2>
-          <p class="card__desc">Snow-capped peaks reflected in a perfectly calm alpine lake.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="gallery-6.jpg" alt="Misty bamboo forest path with soft diffused light" loading="lazy" />
-        <div class="card__body">
-          <h2 class="card__title">Bamboo Path</h2>
-          <p class="card__desc">A quiet trail through towering bamboo and soft light.</p>
-        </div>
-      </article>
+      </section>
 
     </div>
   </main>
 
-  <!-- Contact -->
-  <section class="contact">
-    <div class="contact__inner">
-      <div class="contact__header">
-        <p class="contact__label">Get In Touch</p>
-        <h2 class="contact__title">Visit Our Gallery</h2>
+  <!-- ══ Footer ════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <p>
+        <strong>Atelier</strong> &nbsp;·&nbsp;
+        Objects worth keeping &nbsp;·&nbsp;
+        <span id="footer-year"></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ══ Modal ════════════════════════════════════════════════= -->
+  <div
+    id="modal-overlay"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-label="Product details"
+  >
+    <div id="modal" class="modal" tabindex="-1">
+
+      <!-- Gallery Side -->
+      <div class="modal-gallery" aria-label="Product image gallery">
+        <div id="gallery-viewport" class="gallery-viewport" aria-live="polite">
+          <!-- Images injected by JS -->
+        </div>
+
+        <!-- Prev / Next -->
+        <button
+          id="gallery-prev"
+          class="gallery-prev-btn"
+          aria-label="Previous image"
+        >
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11 4L6 9l5 5"/>
+          </svg>
+        </button>
+
+        <button
+          id="gallery-next"
+          class="gallery-next-btn"
+          aria-label="Next image"
+        >
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 4l5 5-5 5"/>
+          </svg>
+        </button>
+
+        <!-- Dot Indicators -->
+        <div id="dot-row" class="dot-row" aria-hidden="true">
+          <!-- Dots injected by JS -->
+        </div>
+
+        <!-- Counter -->
+        <div id="gallery-counter" class="gallery-counter" aria-live="polite" aria-atomic="true">
+          1 / 1
+        </div>
       </div>
-      <div class="contact__grid">
 
-        <div class="contact-card">
-          <div class="contact-card__icon">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <p class="contact-card__heading">Address</p>
-            <p class="contact-card__text">42 Gallery Lane, Art District
-New York, NY 10012</p>
-          </div>
-        </div>
+      <!-- Content Side -->
+      <div class="modal-content" role="document">
 
-        <div class="contact-card">
-          <div class="contact-card__icon">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div>
-            <p class="contact-card__heading">Phone</p>
-            <p class="contact-card__text">+1 (212) 555-0187</p>
-          </div>
-        </div>
+        <!-- Close -->
+        <button
+          id="modal-close"
+          class="modal-close"
+          aria-label="Close product details"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M3 3l10 10M13 3L3 13"/>
+          </svg>
+        </button>
 
-        <div class="contact-card">
-          <div class="contact-card__icon">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <p class="contact-card__heading">Email</p>
-            <p class="contact-card__text">hello@momentsinlight.com</p>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-card__icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <p class="contact-card__heading">Hours</p>
-            <p class="contact-card__text">Mon – Fri: 10AM – 6PM
-Sat – Sun: 11AM – 5PM</p>
-          </div>
-        </div>
+        <p id="modal-cat" class="modal-cat">Category</p>
+        <h2 id="modal-title" class="modal-title">Product Name</h2>
+        <div class="modal-divider" aria-hidden="true"></div>
+        <p id="modal-desc" class="modal-desc">Description</p>
 
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p class="footer__text">&copy; 2026 Moments in Light. All rights reserved.</p>
-  </footer>
-
+  <script>
+    // Set footer year inline (no extra fetch needed)
+    document.getElementById('footer-year').textContent =
+      new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
